@@ -24,7 +24,6 @@ Options (Enter a number):
         choice = input('Choice: ')
 
         if choice == '1':
-
             amount = int(input('Amount: '))
             print('Accounts:')
             print('0: Bank')
@@ -37,21 +36,21 @@ Options (Enter a number):
             if tranfer_to != 0:
                 data["cash"][tranfer_to-1] += amount
             update_save()
-
             tranfer_from_str = 'Bank' if tranfer_from == 0 else data["players"][tranfer_from-1]
             tranfer_to_str = 'Bank' if tranfer_to == 0 else data["players"][tranfer_to-1]
             transactions_file.write(f'Transfered {amount} from {tranfer_from_str} to {tranfer_to_str} at {current_time()}\n')
         
-        if choice == '2':
+        elif choice == '2':
             print('\nLeaderboard:')
             sorted_cash = sorted(data["cash"], reverse=True)
             for amount in sorted_cash:
                 position = sorted_cash.index(amount)
                 print(f'{data["players"][position]}: {amount}')
                 data['players'].pop(position)
-
-        if choice == '3':
+        elif choice == '3':
             break
+        else:
+            print('Invalid choice, enter 1, 2, or 3')
 
 def new_game():
 
