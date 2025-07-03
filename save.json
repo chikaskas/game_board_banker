@@ -1,1 +1,1 @@
-{"players": [], "cash": [], "last_save": 0}
+{"players": ["Example person one", "Example person two"], "cash": [1000, 1000], "last_save": "never"}
