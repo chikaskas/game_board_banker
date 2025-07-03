@@ -46,7 +46,9 @@ Options (Enter a number):
             print('\nLeaderboard:')
             sorted_cash = sorted(data["cash"], reverse=True)
             for amount in sorted_cash:
-                print(f'{data["players"][sorted_cash.index(amount)]}: {amount}')
+                position = sorted_cash.index(amount)
+                print(f'{data["players"][position]}: {amount}')
+                data['players'].pop(position)
 
         if choice == '3':
             break
