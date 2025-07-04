@@ -63,8 +63,8 @@ def new_game():
     start_cash = int(input('Enter starting cash (int value): '))
 
     #collect player names
+    print('Enter player names below. Max players is 16. Enter "done" when finished')
     for player in range (1, 17):
-        print('Enter player names below. Max players is 16. Enter "done" when finished')
         data['players'].append(input(f'Player {player} name: '))
         if data['players'][-1].lower() == 'done':
             data['players'].pop(-1)
