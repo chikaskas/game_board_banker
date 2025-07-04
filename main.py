@@ -41,12 +41,14 @@ Options (Enter a number):
             transactions_file.write(f'Transfered {amount} from {tranfer_from_str} to {tranfer_to_str} at {current_time()}\n')
         
         elif choice == '2':
-            print('\nLeaderboard:')
+            print('Leaderboard:')
             sorted_cash = sorted(data["cash"], reverse=True)
+            players = list(data["players"])
+            cash = list(data["cash"])
             for amount in sorted_cash:
-                position = sorted_cash.index(amount)
-                print(f'{data["players"][position]}: {amount}')
-                data['players'].pop(position)
+                position = cash.index(amount)
+                print(f'{players[position]}: {amount}')
+                cash[position] = None
         elif choice == '3':
             break
         else:
