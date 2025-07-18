@@ -13,7 +13,8 @@ See leaderboard (for increased competitiveness).
 
 How to **demo**:
 1. Go to https://mybinder.org/v2/gh/chikaskas/game_board_banker/HEAD
-2. When it loads, click terminal.
-3. In the terminal, type python main.py and enter.
-4. To see the transaction history, use option 3 to save and exit and then open the transactions.txt file or use 'cat transactions.txt'.
-5. All saved data should be deleted after you close the tab.
+2. It may take 1-5 minutes to load.
+3. When it loads, click terminal.
+4. In the terminal, type python main.py and enter.
+5. To see the transaction history, use option 3 to save and exit and then open the transactions.txt file or use 'cat transactions.txt'.
+6. All saved data should be deleted after you close the tab.
